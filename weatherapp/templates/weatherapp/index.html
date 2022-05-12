@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align:center" >
+
+    
+    {% if messages %}
+        
+        {% for message in  messages%}
+            {{message}}
+        {% endfor %}
+            
+    {% endif %}
+    <br>
+
+    <h1>Weather App</h1>
+
+    <form action="">
+        <input type="text" name="name">
+        <input type="submit" value="Add">
+    </form>
+    <br>
+
+    {% for i in city_data  %}
+        {{i.city.name}} <br>
+        <p>{{i.temp}}&#8451;</p> <br>
+        <img src="http://openweathermap.org/img/wn/{{ i.icon }}.png" alt="icon">
+        {{i.desc}} <br>
+        <button><a href="{% url 'delete' i.city.id %}">Delete</a></button>
+        <hr>
+    {% endfor %}
+
+</body>
+</html>
