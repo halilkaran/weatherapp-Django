@@ -1,3 +1,3 @@
 # weatherapp-Django
 
-# hi you cam also [Weatherapp](https://halil.pythonanywhere.com) 
+# hi you can also [Weatherapp](https://halil.pythonanywhere.com) 
